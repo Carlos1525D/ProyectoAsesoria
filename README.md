@@ -1,20 +1,21 @@
 # 📚 Sistema de Asesorías Universitarias
 
 📦 sistema-asesorias
-├── 📁 node_modules
-├── 📁 public
-├── 📁 src
-│ ├── 📁 assets
-│ └── 📁 views
-├── 📄 App.vue
-├── 📄 main.js
-├── 📄 .gitignore
-├── 📄 babel.config.js
-├── 📄 jsconfig.json
-├── 📄 package-lock.json
-├── 📄 package.json
-├── 📄 README.md
-└── 📄 vue.config.js
+sistema-asesorias
+├── node_modules/
+├── public/
+├── src/
+│   ├── assets/
+│   ├── views/
+│   ├── App.vue
+│   ├── main.js
+├── .gitignore
+├── babel.config.js
+├── jsconfig.json
+├── package-lock.json
+├── package.json
+├── README.md
+├── vue.config.js
 
 ## 📝 Descripción del proyecto
 
