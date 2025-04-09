@@ -15,6 +15,7 @@
 ├── 📄 package.json
 ├── 📄 README.md
 └── 📄 vue.config.js
+
 ## 📝 Descripción del proyecto
 
 Este sistema tiene como objetivo facilitar la gestión de asesorías académicas dentro del instituto tecnologico de Ensenada.
@@ -39,12 +40,13 @@ Antes de instalar el sistema, asegúrate de contar con lo siguiente:
 1. Clona este repositorio:
    ```bash
    git clone https://github.com/tu-usuario/tu-repositorio.git
-cd tu-repositorio
-npm install
-npm run dev
+- cd tu-repositorio
+- npm install
+- npm run dev
 
-Integrantes del proyecto
-Alexa Espinoza Murillo
-Carlos Daniel López Vega
-Ernesto Escalante Vertti
-Ángel Álvarez Santana
+## 👥 Integrantes del Proyecto
+
+- Alexa Espinoza Murillo  
+- Carlos Daniel López Vega  
+- Ernesto Escalante Vertti  
+- Ángel Álvarez Santana  
