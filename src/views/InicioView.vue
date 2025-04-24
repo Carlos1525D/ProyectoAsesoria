@@ -16,7 +16,7 @@
 
       <!-- Botones -->
       <div class="buttons-container">
-        <button class="button">Alumno</button>
+        <router-link to="/login-alumno" class="button">Alumno</router-link>
         <button class="button">Asesor</button>
         <button class="button">Administrador</button>
       </div>

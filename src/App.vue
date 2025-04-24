@@ -1,18 +1,13 @@
 <template>
   <div id="app">
-    
-    <InicioView />
+    <!-- Renderiza las vistas según la ruta activa -->
+    <router-view />
   </div>
 </template>
 
 <script>
-import InicioView from './views/InicioView.vue'; // Asegúrate de que esta ruta sea correcta
-
 export default {
   name: "App",
-  components: {
-    InicioView
-  }
 };
 </script>
 
