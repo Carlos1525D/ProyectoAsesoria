@@ -17,18 +17,17 @@
         v-show="menuOpen"
         class="dropdown-menu"
       >
-        <button class="dropdown-button" @click="goToPerfil">Perfil</button>
-        <button class="dropdown-button" @click="goToSoliTema">Solicitud de tema</button>
-        <button class="dropdown-button" @click="goToMenu">Busqueda de Asesorias</button>
-        <button class="dropdown-button">Notificaciones</button>
-        <button class="dropdown-button" @click="goToEvaluacion">Evaluación</button>
+        <button class="dropdown-button" @click="goToMenu">Mis asesorias</button>
+        <button class="dropdown-button" @click="goToAsistencias">Asistencias</button>
+        <button class="dropdown-button"  @click="goToComentarios">Comentarios</button>
+        <button class="dropdown-button" @click="goToNoti">Notificaciones</button>
         <button class="dropdown-button">Salir</button>
       </div>
   
       <!-- Contenido principal -->
       <div class="content-container">
         <div class="text-section">
-          <p class="bold-text">Notificaciones</p>
+          <p class="bold-text">Datos Generales Asesor</p>
         </div>
       </div>
     </div>
@@ -36,7 +35,7 @@
   
   <script>
   export default {
-    name: "NotiAsesoradoView",
+    name: "PerfilAsesorView",
     data() {
       return {
         menuOpen: false,
@@ -47,18 +46,18 @@
         this.menuOpen = !this.menuOpen;
         console.log("menuOpen:", this.menuOpen);
       },
-      goToPerfil() {
-        this.$router.push({ name: "PerfilAsesorado" }); // Navega a la vista Perfil
+      goToAsistencias() {
+        this.$router.push({ name: "AsistenciaAsesor" }); 
       },
-      goToSoliTema() {
-      this.$router.push({ name: "SolicitudTema" });
-    },
-    goToEvaluacion() {
-      this.$router.push({ name: "Evaluacion" });
-    },
-    goToMenu() {
-      this.$router.push({ name: "MenuAsesorado" });
-    },
+      goToNoti() {
+        this.$router.push({ name: "NotiAsesor" }); 
+      },
+      goToComentarios() {
+        this.$router.push({ name: "ComentariosAsesor" });
+      },
+      goToMenu() {
+        this.$router.push({ name: "MenuAsesor" });
+      },
     },
   };
   </script>

@@ -17,8 +17,9 @@
       <!-- Botones -->
       <div class="buttons-container">
         <router-link to="/login-alumno" class="button">Alumno</router-link>
-        <button class="button">Asesor</button>
-        <button class="button">Administrador</button>
+        <router-link to="/login-asesor" class="button">Asesor</router-link>
+        <router-link to="/login-Admin" class="button">Administrador</router-link>
+      
       </div>
     </section>
   </div>

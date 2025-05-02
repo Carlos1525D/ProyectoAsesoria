@@ -13,12 +13,9 @@
     </header>
 
     <!-- Menú desplegable -->
-    <div
-      v-show="menuOpen"
-      class="dropdown-menu"
-    >
+    <div v-show="menuOpen" class="dropdown-menu">
       <button class="dropdown-button" @click="goToPerfil">Perfil</button>
-      <button class="dropdown-button"  @click="goToSoliTema">Solicitud de tema</button>
+      <button class="dropdown-button" @click="goToSoliTema">Solicitud de tema</button>
       <button class="dropdown-button" @click="goToMenu">Solicitud de asesoría</button>
       <button class="dropdown-button" @click="goToNoti">Notificaciones</button>
       <button class="dropdown-button" @click="goToEvaluacion">Evaluación</button>
@@ -29,6 +26,16 @@
     <div class="content-container">
       <div class="text-section">
         <p class="bold-text">Datos Generales</p>
+      </div>
+
+      <!-- Cuadros de Datos -->
+      <div class="data-container">
+        <div class="data-box">
+          <p class="data-title">Mis datos personales</p>
+        </div>
+        <div class="data-box">
+          <p class="data-title">Mis datos académicos</p>
+        </div>
       </div>
     </div>
   </div>
@@ -45,13 +52,12 @@ export default {
   methods: {
     toggleMenu() {
       this.menuOpen = !this.menuOpen;
-      console.log("menuOpen:", this.menuOpen);
     },
     goToPerfil() {
-      this.$router.push({ name: "PerfilAsesorado" }); // Navega a la vista Perfil
+      this.$router.push({ name: "PerfilAsesorado" });
     },
     goToNoti() {
-      this.$router.push({ name: "NotiAsesorado" }); // Navega a la vista notificacion
+      this.$router.push({ name: "NotiAsesorado" });
     },
     goToSoliTema() {
       this.$router.push({ name: "SolicitudTema" });
@@ -78,8 +84,8 @@ export default {
   width: 100%;
   background-color: #2e2a67;
   display: flex;
-  justify-content: center; /* Centra el logo horizontalmente */
-  align-items: center; /* Centra el logo verticalmente */
+  justify-content: center;
+  align-items: center;
   height: 100px;
   z-index: 100;
   padding: 0 20px;
@@ -104,8 +110,8 @@ export default {
 /* Menú desplegable */
 .dropdown-menu {
   position: fixed;
-  top: 100px; /* justo debajo del header */
-  left: 20px; /* exactamente donde está el ícono del menú */
+  top: 100px;
+  left: 20px;
   background-color: white;
   border: 1px solid #ccc;
   border-radius: 5px;
@@ -141,10 +147,35 @@ export default {
   margin-top: 140px;
 }
 
+/* Texto */
 .bold-text {
   font-weight: bold;
   font-size: 1.5rem;
   color: #0a0a0a;
   text-align: center;
+}
+
+/* Cuadros de Datos */
+.data-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  width: 80%;
+  margin-top: 20px;
+}
+
+.data-box {
+  flex: 1;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+.data-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #333;
 }
 </style>

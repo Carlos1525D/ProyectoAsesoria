@@ -4,42 +4,96 @@
       <header class="header">
         <img src="@/assets/logo.png" alt="Logo" class="logo" />
       </header>
+      <header class="header">
+        <img
+          ref="menuIcon"
+          src="@/assets/menu.png"
+          alt="Menú"
+          class="menu-icon"
+          @click="toggleMenu"
+        />
+        <img src="@/assets/logo.png" alt="Logo" class="logo" />
+      </header>
+  
+      <div
+        v-show="menuOpen"
+        class="dropdown-menu"
+      >
+        <button class="dropdown-button" @click="goToBajaAsesor">Dar baja asesor</button>
+        <button class="dropdown-button" @click="goToBajaAlumn">Dar de baja Alumno</button>
+        <button class="dropdown-button" @click="goToNoti">Notificaciones</button>
+        <button class="dropdown-button" @click="goToEncuestas">Encuestas</button>
+        <button class="dropdown-button" @click="goToSalir">Salir</button>
+      </div>
+  
   
       <!-- Título principal -->
       <div class="icon-container">
-        <p class="bold-text">Crear cuenta nueva</p>
+        <p class="bold-text">Dar Baja Alumno</p>
       </div>
   
       <!-- Sección de matrícula -->
       <div class="input-group">
-        <label class="form-label">Matrícula:</label>
+        <label class="form-label">Materia:</label>
         <input type="text" class="form-input" placeholder="Escribe tu matrícula" />
       </div>
   
       <!-- Sección de correo -->
       <div class="input-group">
-        <label class="form-label">Correo:</label>
+        <label class="form-label">Tema:</label>
         <input type="text" class="form-input" placeholder="Escribe tu correo" />
       </div>
   
       <!-- Sección de contraseña -->
       <div class="input-group">
-        <label class="form-label">Contraseña:</label>
+        <label class="form-label">Modalidad:</label>
         <input type="password" class="form-input" placeholder="Escribe tu contraseña" />
       </div>
   
       <!-- Sección de confirmar contraseña -->
       <div class="input-group">
-        <label class="form-label">Confirmar contraseña:</label>
+        <label class="form-label">Asesor:</label>
         <input type="password" class="form-input" placeholder="Confirma tu contraseña" />
       </div>
       
-  <button class="crear-cuenta-button">Crear cuenta</button>
+  <button class="crear-cuenta-button">Enviar</button>
 
 
     </div>
   </template>
-  
+  <script>
+  export default {
+    name: "MenuAdminView",
+    data() {
+      return {
+        menuOpen: false,
+      };
+    },
+    methods: {
+      toggleMenu() {
+        this.menuOpen = !this.menuOpen;
+        console.log("menuOpen:", this.menuOpen);
+      },
+      goToBajaAsesor() {
+        this.$router.push({ name: "BajaAsesor" });
+      },
+      goToNoti() {
+        this.$router.push({ name: "MenuAdmin" });
+      },
+      goToBajaAlumn() {
+        this.$router.push({ name: "BajaAlumno" });
+      },
+      goToEncuestas() {
+        this.$router.push({ name: "EncuestasAdmin" });
+      },
+      goToSalir() {
+        this.$router.push({ name: "Inicio" });
+      },
+      
+    
+    },
+  };
+  </script>
   <style>
   /* Header */
   .header {

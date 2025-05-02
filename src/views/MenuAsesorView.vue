@@ -15,10 +15,10 @@
     <!-- Menú desplegable -->
     <div v-show="menuOpen" class="dropdown-menu">
       
-      <button class="dropdown-button"  @click="goToSoliTema">Solicitud de tema</button>
-      <button class="dropdown-button" @click="goToMenu">Busqueda de Asesorias</button>
+    
+      <button class="dropdown-button" @click="goToAsistencias">Asistencias</button>
       <button class="dropdown-button" @click="goToNoti">Notificaciones</button>
-      <button class="dropdown-button" @click="goToEvaluacion">Evaluación</button>
+      <button class="dropdown-button" @click="goToComentarios">Comentarios</button>
       <button class="dropdown-button" @click="goToSalir">Salir</button>
     </div>
 
@@ -33,7 +33,7 @@
           <p class="profile-name">Nombre completo</p>
         </div>
 
-        <p class="bold-text">Búsqueda de Asesoría</p>
+        <p class="bold-text">Mis Asesorias</p>
 
         <div class="notification-container">
           <!-- Botón de notificación con imagen -->
@@ -44,17 +44,14 @@
         </div>
       </div>
 
-      <div class="search-input-wrapper">
-        <img src="@/assets/buscador.png" alt="Buscar" class="search-icon" />
-        <input type="text" class="search-input" placeholder="Escribe aquí tu búsqueda..." />
-      </div>
+      
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: "MenuAsesoradoView",
+  name: "MenuAsesorView",
   data() {
     return {
       menuOpen: false,
@@ -65,19 +62,16 @@ export default {
       this.menuOpen = !this.menuOpen;
     },
     goToPerfil() {
-      this.$router.push({ name: "PerfilAsesorado" });
+      this.$router.push({ name: "PerfilAsesor" });
     },
     goToNoti() {
-      this.$router.push({ name: "NotiAsesorado" });
+      this.$router.push({ name: "NotiAsesor" });
     },
-    goToMenu() {
-      this.$router.push({ name: "MenuAsesorado" });
+    goToAsistencias() {
+      this.$router.push({ name: "AsistenciaAsesor" });
     },
-    goToEvaluacion() {
-      this.$router.push({ name: "Evaluacion" });
-    },
-    goToSoliTema() {
-      this.$router.push({ name: "SolicitudTema" });
+    goToComentarios() {
+      this.$router.push({ name: "ComentariosAsesor" });
     },
     goToSalir() {
       this.$router.push({ name: "Inicio" });
@@ -176,7 +170,7 @@ export default {
   border: none;
   padding: 0;
   cursor: pointer;
-  width: 55px;
+  width: 60px;
 }
 
 .profile-button:hover {
@@ -185,7 +179,7 @@ export default {
 
 /* Ícono de perfil */
 .profile-icon {
-  width: 40px;
+  width: 60px;
   height: auto;
 }
 
@@ -211,7 +205,7 @@ export default {
   border: none;
   padding: 0;
   cursor: pointer;
-  width: 55px;
+  width: 100px;
 }
 
 .notification-button:hover {
@@ -220,7 +214,7 @@ export default {
 
 /* Ícono de notificación */
 .notification-icon {
-  width: 16px;
+  width: 50px;
   height: auto;
 }
 
@@ -235,38 +229,32 @@ export default {
 
 /* Búsqueda */
 .search-input-wrapper {
-  position: relative;
   display: flex;
   align-items: center;
-  width: 50%;
-  max-width: 500px;
-  border: 1px solid #ccc;
-  border-radius: 20px;
-  padding: 5px;
-  background-color: white;
+  position: relative;
+  margin-top: 10px;
 }
 
 .search-input {
-  flex: 1;
-  border: none;
-  outline: none;
-  padding: 8px 12px;
-  padding-left: 35px; /* Espacio para el icono */
-  font-size: 1rem;
-}
+  width: 40%;
+  padding: 6px 6px 6px 30px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 0.9rem;
 
-.search-icon {
-  position: absolute;
-  left: 10px;
-  width: 20px;
-  height: 20px;
 }
-
 
 .search-input::placeholder {
   color: #aaa;
   font-style: italic;
 }
 
-
+.search-icon {
+  position: absolute;
+  left: 8px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 16px;
+  height: 16px;
+}
 </style>

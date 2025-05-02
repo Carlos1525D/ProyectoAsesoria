@@ -13,22 +13,28 @@
       </header>
   
       <!-- Menú desplegable -->
-      <div
-        v-show="menuOpen"
-        class="dropdown-menu"
-      >
-        <button class="dropdown-button" @click="goToPerfil">Perfil</button>
-        <button class="dropdown-button" @click="goToSoliTema">Solicitud de tema</button>
-        <button class="dropdown-button" @click="goToMenu">Busqueda de Asesorias</button>
-        <button class="dropdown-button">Notificaciones</button>
-        <button class="dropdown-button" @click="goToEvaluacion">Evaluación</button>
-        <button class="dropdown-button">Salir</button>
+      <div v-show="menuOpen" class="dropdown-menu">
+        <button class="dropdown-button" @click="goToBajaAlumno">Dar de baja Alumno</button>
+        <button class="dropdown-button" @click="goToBajaAsesor">Dar de baja Asesor</button>
+        <button class="dropdown-button" @click="goToNoti">Notificaciones</button>
+        <button class="dropdown-button" @click="goToEncuestas">Encuestas</button>
+        <button class="dropdown-button" @click="goToSalir">Salir</button>
       </div>
   
       <!-- Contenido principal -->
       <div class="content-container">
         <div class="text-section">
-          <p class="bold-text">Notificaciones</p>
+          <p class="bold-text">Datos Generales</p>
+        </div>
+  
+        <!-- Cuadros de Datos -->
+        <div class="data-container">
+          <div class="data-box">
+            <p class="data-title">Mis datos personales</p>
+          </div>
+          <div class="data-box">
+            <p class="data-title">Datos de la institucion</p>
+          </div>
         </div>
       </div>
     </div>
@@ -36,7 +42,7 @@
   
   <script>
   export default {
-    name: "NotiAsesoradoView",
+    name: "PerfilAsesoradoView",
     data() {
       return {
         menuOpen: false,
@@ -45,20 +51,22 @@
     methods: {
       toggleMenu() {
         this.menuOpen = !this.menuOpen;
-        console.log("menuOpen:", this.menuOpen);
       },
-      goToPerfil() {
-        this.$router.push({ name: "PerfilAsesorado" }); // Navega a la vista Perfil
+      goToBajaAlumno() {
+        this.$router.push({ name: "BajaAlumno" });
       },
-      goToSoliTema() {
-      this.$router.push({ name: "SolicitudTema" });
-    },
-    goToEvaluacion() {
-      this.$router.push({ name: "Evaluacion" });
-    },
-    goToMenu() {
-      this.$router.push({ name: "MenuAsesorado" });
-    },
+      goToBajaAsesor() {
+        this.$router.push({ name: "BajaAsesor" });
+      },
+      goToNoti() {
+        this.$router.push({ name: "MenuAdmin" });
+      },
+      goToEncuestas() {
+        this.$router.push({ name: "EncuestasAdmin" });
+      },
+      goToSalir() {
+        this.$router.push({ name: "Inicio" });
+      },
     },
   };
   </script>
@@ -75,8 +83,8 @@
     width: 100%;
     background-color: #2e2a67;
     display: flex;
-    justify-content: center; /* Centra el logo horizontalmente */
-    align-items: center; /* Centra el logo verticalmente */
+    justify-content: center;
+    align-items: center;
     height: 100px;
     z-index: 100;
     padding: 0 20px;
@@ -101,8 +109,8 @@
   /* Menú desplegable */
   .dropdown-menu {
     position: fixed;
-    top: 100px; /* justo debajo del header */
-    left: 20px; /* exactamente donde está el ícono del menú */
+    top: 100px;
+    left: 20px;
     background-color: white;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -138,11 +146,36 @@
     margin-top: 140px;
   }
   
+  /* Texto */
   .bold-text {
     font-weight: bold;
     font-size: 1.5rem;
     color: #0a0a0a;
     text-align: center;
+  }
+  
+  /* Cuadros de Datos */
+  .data-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 80%;
+    margin-top: 20px;
+  }
+  
+  .data-box {
+    flex: 1;
+    background-color: #f5f5f5;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .data-title {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
   }
   </style>
   

@@ -7,7 +7,7 @@
   
       <!-- Título principal -->
       <div class="icon-container">
-        <p class="bold-text">Recuperar Contraseña</p>
+        <p class="bold-text">Recuperar Contraseña Asesor</p>
       </div>
   
       <!-- Sección de matrícula -->
@@ -29,15 +29,15 @@
       </div>
   
       <!-- Botón Crear Cuenta -->
-      
+      <div class="button-section">
         <button class="crear-cuenta-button">Cambiar contraseña</button>
-      
+      </div>
     </div>
   </template>
   
   <script>
   export default {
-    name: "RecuperarAsesoradoView",
+    name: "RecuperarAsesorView",
   };
   </script>
   

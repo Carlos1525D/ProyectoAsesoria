@@ -7,40 +7,44 @@
   
       <!-- Título principal -->
       <div class="icon-container">
-        <p class="bold-text">Recuperar Contraseña</p>
+        <p class="bold-text">Crear cuenta nueva de Asesor</p>
       </div>
   
-      <!-- Sección de matrícula -->
+      <!-- Sección de numero de empleado -->
+      <div class="input-group">
+        <label class="form-label">Numero empleado:</label>
+        <input type="text" class="form-input" placeholder="Escribe tu numero de empleado" />
+      </div>
+  
+      <!-- Sección de correo -->
       <div class="input-group">
         <label class="form-label">Correo:</label>
         <input type="text" class="form-input" placeholder="Escribe tu correo" />
       </div>
   
-      <!-- Sección de correo -->
-      <div class="input-group">
-        <label class="form-label">Nueva contraseña:</label>
-        <input type="text" class="form-input" placeholder="Escribe tu nueva contraseña" />
-      </div>
-  
       <!-- Sección de contraseña -->
       <div class="input-group">
-        <label class="form-label">Confirmar contraseña:</label>
+        <label class="form-label">Contraseña:</label>
         <input type="password" class="form-input" placeholder="Escribe tu contraseña" />
+      </div>
+  
+      <!-- Sección de confirmar contraseña -->
+      <div class="input-group">
+        <label class="form-label">Confirmar contraseña:</label>
+        <input type="password" class="form-input" placeholder="Confirma tu contraseña" />
       </div>
   
       <!-- Botón Crear Cuenta -->
       
-        <button class="crear-cuenta-button">Cambiar contraseña</button>
+        <button class="crear-cuenta-button">Crear cuenta</button>
       
     </div>
   </template>
-  
   <script>
   export default {
-    name: "RecuperarAsesoradoView",
+    name: "CrearAsesorView",
   };
   </script>
-  
   <style>
   /* Header */
   .header {

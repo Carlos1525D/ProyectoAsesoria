@@ -17,18 +17,16 @@
         v-show="menuOpen"
         class="dropdown-menu"
       >
-        <button class="dropdown-button" @click="goToPerfil">Perfil</button>
-        <button class="dropdown-button" @click="goToSoliTema">Solicitud de tema</button>
-        <button class="dropdown-button" @click="goToMenu">Busqueda de Asesorias</button>
-        <button class="dropdown-button">Notificaciones</button>
-        <button class="dropdown-button" @click="goToEvaluacion">Evaluación</button>
-        <button class="dropdown-button">Salir</button>
+        <button class="dropdown-button" @click="goToBajaAlumno">Dar baja Alumno</button>
+        <button class="dropdown-button" @click="goToBajaAsesor">Dar baja Asesor</button>
+        <button class="dropdown-button" @click="goToNotiAdmin">Notificaciones</button>
+        <button class="dropdown-button" @click="goToSalir">Salir</button>
       </div>
   
       <!-- Contenido principal -->
       <div class="content-container">
         <div class="text-section">
-          <p class="bold-text">Notificaciones</p>
+          <p class="bold-text">Encuestas</p>
         </div>
       </div>
     </div>
@@ -36,7 +34,7 @@
   
   <script>
   export default {
-    name: "NotiAsesoradoView",
+    name: "EncuestasAdminView",
     data() {
       return {
         menuOpen: false,
@@ -47,17 +45,17 @@
         this.menuOpen = !this.menuOpen;
         console.log("menuOpen:", this.menuOpen);
       },
-      goToPerfil() {
-        this.$router.push({ name: "PerfilAsesorado" }); // Navega a la vista Perfil
+      goToBajaAlumno() {
+        this.$router.push({ name: "BajaAlumno" }); // Navega a la vista Perfil
       },
-      goToSoliTema() {
-      this.$router.push({ name: "SolicitudTema" });
+      goToBajaAsesor() {
+      this.$router.push({ name: "BajaAsesor" });
     },
-    goToEvaluacion() {
-      this.$router.push({ name: "Evaluacion" });
+    goToNotiAdmin() {
+      this.$router.push({ name: "MenuAdmin" });
     },
-    goToMenu() {
-      this.$router.push({ name: "MenuAsesorado" });
+    goToSalir() {
+      this.$router.push({ name: "Inicio" });
     },
     },
   };

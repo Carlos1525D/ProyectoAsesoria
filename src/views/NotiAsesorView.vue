@@ -17,18 +17,17 @@
         v-show="menuOpen"
         class="dropdown-menu"
       >
-        <button class="dropdown-button" @click="goToPerfil">Perfil</button>
-        <button class="dropdown-button" @click="goToSoliTema">Solicitud de tema</button>
-        <button class="dropdown-button" @click="goToMenu">Busqueda de Asesorias</button>
-        <button class="dropdown-button">Notificaciones</button>
-        <button class="dropdown-button" @click="goToEvaluacion">Evaluación</button>
+        <button class="dropdown-button" @click="goToPerfil">Perfil asesor</button>
+        <button class="dropdown-button" @click="goToMenu">Mis asesorias</button>
+        <button class="dropdown-button" @click="goToAsistencias">Asistencias</button>
+        <button class="dropdown-button" @click="goToComentarios">Comentarios</button>
         <button class="dropdown-button">Salir</button>
       </div>
   
       <!-- Contenido principal -->
       <div class="content-container">
         <div class="text-section">
-          <p class="bold-text">Notificaciones</p>
+          <p class="bold-text">Notificaciones Asesor</p>
         </div>
       </div>
     </div>
@@ -36,7 +35,7 @@
   
   <script>
   export default {
-    name: "NotiAsesoradoView",
+    name: "NotiAsesorView",
     data() {
       return {
         menuOpen: false,
@@ -48,16 +47,16 @@
         console.log("menuOpen:", this.menuOpen);
       },
       goToPerfil() {
-        this.$router.push({ name: "PerfilAsesorado" }); // Navega a la vista Perfil
+        this.$router.push({ name: "PerfilAsesor" }); // Navega a la vista Perfil
       },
-      goToSoliTema() {
-      this.$router.push({ name: "SolicitudTema" });
+      goToAsistencias() {
+      this.$router.push({ name: "AsistenciaAsesor" });
     },
-    goToEvaluacion() {
-      this.$router.push({ name: "Evaluacion" });
+    goToComentarios() {
+      this.$router.push({ name: "ComentariosAsesor" });
     },
     goToMenu() {
-      this.$router.push({ name: "MenuAsesorado" });
+      this.$router.push({ name: "MenuAsesor" });
     },
     },
   };

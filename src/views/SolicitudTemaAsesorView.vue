@@ -17,24 +17,38 @@
         v-show="menuOpen"
         class="dropdown-menu"
       >
-        <button class="dropdown-button" @click="goToPerfil">Perfil</button>
-        <button class="dropdown-button" @click="goToSoliTema">Solicitud de tema</button>
-        <button class="dropdown-button" @click="goToMenu">Busqueda de Asesorias</button>
-        <button class="dropdown-button" @click="goToNoti">Notificaciones</button>
-        <button class="dropdown-button">Evaluación</button>
+        <button class="dropdown-button" @click="goToPerfil">Perfil Asesor</button>
+        <button class="dropdown-button">Solicitud de tema asesor</button>
+        <button class="dropdown-button" @click="goToNoti">Notificaciones asesor</button>
         <button class="dropdown-button">Salir</button>
       </div>
   
       <!-- Contenido principal -->
       <div class="content-container">
         <div class="text-section">
-          <p class="bold-text">Evaluacion Asesoria</p>
+          <p class="bold-text">Solicitud de Tema Asesor</p>
         </div>
   
-        <!-- Nuevo párrafo y enlace -->
-        <div class="additional-section">
-          <p class="paragraph">Para evaluar a este asesor accede al formulario</p>
-          <a href="https://docs.google.com/forms/d/e/1FAIpQLSd0FXU2k631H077s7iyJvdi4nuegWdPVIBesgQsa2yRv3lWsA/viewform?usp=header" class="link" target="_blank">Acceder al formulario</a>
+        <!-- Párrafo adicional y campo de texto -->
+        <div class="paragraph-section">
+          <p class="paragraph">Si requieres de una asesoría que no se encuentra en este sitio, por favor envía tu solicitud.</p>
+          <div class="input-group">
+            <label class="form-label">Materia:</label>
+            <input type="text" class="form-input" placeholder="Escribe aquí..." />
+          </div>
+          <div class="input-group">
+            <label class="form-label">Tema:</label>
+            <input type="text" class="form-input" placeholder="Escribe aquí..." />
+          </div>
+          <div class="input-group">
+            <label class="form-label">Urgencia:</label>
+            <input type="text" class="form-input" placeholder="Escribe aquí..." />
+          </div>
+        </div>
+  
+        <!-- Botón Enviar -->
+        <div class="button-section">
+          <button class="send-button">Enviar</button>
         </div>
       </div>
     </div>
@@ -42,7 +56,7 @@
   
   <script>
   export default {
-    name: "EvaluacionView",
+    name: "SolicitudTemaAsesorView",
     data() {
       return {
         menuOpen: false,
@@ -53,16 +67,13 @@
         this.menuOpen = !this.menuOpen;
       },
       goToPerfil() {
-        this.$router.push({ name: "PerfilAsesorado" });
+        this.$router.push({ name: "PerfilAsesor" });
       },
       goToNoti() {
-        this.$router.push({ name: "NotiAsesorado" });
-      },
-      goToSoliTema() {
-        this.$router.push({ name: "SolicitudTema" });
+        this.$router.push({ name: "NotiAsesor" });
       },
       goToMenu() {
-        this.$router.push({ name: "MenuAsesorado" });
+        this.$router.push({ name: "MenuAsesor" });
       },
     },
   };
@@ -150,9 +161,10 @@
     text-align: center;
   }
   
-  /* Nueva sección adicional */
-  .additional-section {
+  /* Párrafo adicional */
+  .paragraph-section {
     margin-top: 20px;
+    width: 100%;
     text-align: center;
   }
   
@@ -163,15 +175,45 @@
     margin-bottom: 10px;
   }
   
-  .link {
-    color: #2e2a67;
+  /* Grupo de entrada */
+  .input-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .form-label {
     font-size: 1rem;
-    text-decoration: none;
+    color: black;
     font-weight: bold;
   }
   
-  .link:hover {
-    text-decoration: underline;
+  .form-input {
+    width: 250px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  /* Botón Enviar */
+  .button-section {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .send-button {
+    background-color: #2e2a67;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  .send-button:hover {
+    background-color: #1a1a5e;
   }
   </style>
   
