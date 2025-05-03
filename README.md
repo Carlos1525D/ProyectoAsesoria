@@ -41,7 +41,7 @@ Antes de instalar el sistema, asegúrate de contar con lo siguiente:
 
 ## ⚙️ Procedimiento de Instalación  
 
-```bash
+
 git clone https://github.com/tu-usuario/tu-repositorio.git
 cd tu-repositorio
 npm install
@@ -50,7 +50,7 @@ npm run serve
 
 ---
 
-👥 Integrantes del Proyecto
+## 👥 Integrantes del Proyecto
 👤 Alexa Espinoza Murillo
 👤 Carlos Daniel López Vega
 👤 Ernesto Escalante Vertti
