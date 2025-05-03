@@ -51,10 +51,14 @@ npm run serve
 ---
 
 ## 👥 Integrantes del Proyecto
-👤 Alexa Espinoza Murillo
-👤 Carlos Daniel López Vega
-👤 Ernesto Escalante Vertti
-👤 Ángel Álvarez Santana
+👤 Alexa Espinoza Murillo <br>
+
+👤 Carlos Daniel López Vega <br>
+
+👤 Ernesto Escalante Vertti <br>
+
+👤 Ángel Álvarez Santana <br>
+
 
 ---
 
