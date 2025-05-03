@@ -48,12 +48,17 @@ npm install
 npm run dev
 npm run serve
 
+---
+
 👥 Integrantes del Proyecto
 👤 Alexa Espinoza Murillo
 👤 Carlos Daniel López Vega
 👤 Ernesto Escalante Vertti
 👤 Ángel Álvarez Santana
 
-## Git hub
-https://docs.google.com/document/d/1jm7XVzMNtXdvODL4rA-e8vWEbzKD7CJ24IId1VVeDOU/edit?usp=sharing
+---
+
+📄 **Documentación del Proyecto:** [Accede aquí](https://docs.google.com/document/d/1jm7XVzMNtXdvODL4rA-e8vWEbzKD7CJ24IId1VVeDOU/edit?usp=sharing)  
+
+
 
