@@ -42,12 +42,12 @@ Antes de instalar el sistema, asegúrate de contar con lo siguiente:
 ## ⚙️ Procedimiento de Instalación  
 
 
-git clone https://github.com/tu-usuario/tu-repositorio.git
-cd tu-repositorio
-npm install
-npm run dev
-npm run serve
-npm install postgres
+git clone https://github.com/tu-usuario/tu-repositorio.git <br>
+cd tu-repositorio <br>
+npm install <br>
+npm run dev <br>
+npm run serve <br>
+npm install postgres <br>
 
 ---
 
