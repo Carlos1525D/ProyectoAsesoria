@@ -48,6 +48,7 @@ npm install <br>
 npm run dev <br>
 npm run serve <br>
 npm install postgres <br>
+npm install dotenv <br>
 
 ---
 
