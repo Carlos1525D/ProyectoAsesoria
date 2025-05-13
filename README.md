@@ -33,7 +33,7 @@ El proyecto está desarrollado con enfoque en **microservicios** y una interfaz 
 Antes de instalar el sistema, asegúrate de contar con lo siguiente:  
 
 - [Node.js](https://nodejs.org/) y npm instalados  
-- [Supabase](https://supabase.com/dashboard/project/zovnayxmqzouwofwoawz) como gestor de base de datos  
+- [Firebase](https://firebase.studio) como gestor de base de datos  
 - [Visual Studio Code](https://code.visualstudio.com/) como editor (opcional)  
 - Conexión a internet para uso de APIs de Google (Meet, Gmail, etc.)  
 
@@ -47,9 +47,10 @@ cd tu-repositorio <br>
 npm install <br>
 npm run dev <br>
 npm run serve <br>
-npm install postgres <br>
-npm install dotenv <br>
-npm install pg <br>
+npm install firebase <br>
+npm install firebase react-firebase-hooks <br>
+npm install bulma <br>
+
 
 ---
 
