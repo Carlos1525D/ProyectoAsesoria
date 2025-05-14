@@ -33,7 +33,7 @@ Antes de instalar el sistema, asegúrate de contar con lo siguiente:
 - [MySQL](https://www.mysql.com/) como gestor de base de datos
 - [Visual Studio Code](https://code.visualstudio.com/) como editor (opcional)
 - Conexión a internet para uso de APIs de Google (Meet, Gmail, etc.)
-
+- Composer para manejar paquetes de PHP
 ---
 
 ## ⚙️ Procedimiento de instalación
