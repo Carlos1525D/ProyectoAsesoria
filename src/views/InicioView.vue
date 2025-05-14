@@ -25,6 +25,33 @@
   </div>
 </template>
 
+<script>
+import api from '@/api/axios'; //  verificar Axios esté configurado correctamente
+
+export default {
+  name: "InicioView",
+  data() {
+    return {
+      connectionMessage: '', // Para almacenar el mensaje del backend
+    };
+  },
+  methods: {
+    async checkConnection() {
+      try {
+        const response = await api.get('/prueba'); // Ruta de prueba en el backend
+        this.connectionMessage = response.data.message;
+      } catch (error) {
+        console.error('Error al conectar con el backend:', error);
+        this.connectionMessage = 'Error al conectar con el backend';
+      }
+    },
+  },
+  created() {
+    this.checkConnection(); // Verificar la conexión al cargar el componente
+  },
+};
+</script>
+
 <style>
 /* Header pegado arriba */
 .header {
@@ -92,5 +119,12 @@
 .button:hover {
   transform: scale(1.05);
   background-color: #1a1a5e; /* Azul más oscuro en hover */
+}
+/* Mensaje de conexión */
+.connection-message {
+  margin-top: 20px;
+  font-size: 1rem;
+  color: #2e2a67;
+  font-weight: bold;
 }
 </style>
